@@ -1,5 +1,6 @@
 package hello.core.order;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DisCountPolicy;
 import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
@@ -11,18 +12,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
     private final DisCountPolicy disCountPolicy;
 
-/*
-    public OrderServiceImpl(MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
+
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DisCountPolicy disCountPolicy) {
         this.memberRepository = memberRepository;
         this.disCountPolicy = disCountPolicy;
     }
-*/
+
     /*
         @Autowired
         public void init(MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
