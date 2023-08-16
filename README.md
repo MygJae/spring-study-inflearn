@@ -1,2 +1,1 @@
-# spring-study-inflearn
-- 김영한님 강의 정리
+# 김영한님 인프런 스프링 강의
